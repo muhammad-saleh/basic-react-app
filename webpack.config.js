@@ -1,11 +1,18 @@
+var webpack = require('webpack');
+
 module.exports = {
-    entry: "./src/main.js",
+    entry: [
+        "webpack-dev-server/client?http://localhost:1111",
+        "./src/main.js"
+    ],
     output: {
         path: "./public",
+        publicPath: "/public",
         filename: "bundle.js"
     },
     devServer: {
         inline: true,
+        hot: true,
         port: 1111
     },
     module: {
@@ -15,6 +22,9 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel"
             }
+        ],
+        plugins: [
+            new webpack.NoErrorsPlugin()
         ]
     }
 }
