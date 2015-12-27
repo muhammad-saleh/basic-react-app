@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/muhammad-saleh/basic-react-app#readme",
   "dependencies": {
+    "history": "^1.17.0",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
